@@ -1,0 +1,29 @@
+const environments = {
+    development: {
+        mysql: {
+            username: 'root',
+            password: '',
+            database: 'nodeapi',
+            host:'localhost',
+            dialect:'mysql'
+        },
+        facebook: {
+            clientID: '',
+            clientSecret: ''
+        }
+    },
+
+    test: {
+        mysql: {
+            username: 'root',
+            password: '132132',
+            database: 'nodeapi_test'
+        }
+    },
+    production: {
+        
+    }
+}
+const nodeEnv = process.env.NODE_ENV || 'development';
+module.exports = environments[nodeEnv];
+
